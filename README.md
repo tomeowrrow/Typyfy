@@ -41,12 +41,38 @@ Then Typyfy is for you! Use the magical power of the command-line interface to r
 
 ## Table structure
 
-+-----------+    +--------------+    +------------+   +-------------+    +-------------+
-|  Person   |    | MemoryPerson |    |   Memory   |   |  MemoryTag  |    |     Tag     |
-+-----------+    +--------------+    +------------+   +-------------+    +-------------+
-|  id  x    |    | memory_id ~  |    |     id ~   |   |~ memory_id  |    |   · id      |
-|  name     |    | person_id x  |    |   title    |   |   tag_id ·  |    |     name    |
-| birthdate |    +==============+    |  content   |   +=============+    | description |
-|   bio     |                        | timestamp  |                      +=============+
-+===========+                        | created_at |
-                                     +============+
+### 📄 Person
+| Column     | Type    | Notes              |
+|------------|---------|--------------------|
+| id         | INTEGER | Primary key (x)    |
+| name       | TEXT    |                    |
+| birthdate  | TEXT    |                    |
+| bio        | TEXT    |                    |
+
+### 🔗 MemoryPerson (Join Table)
+| Column      | Type    | Notes                        |
+|-------------|---------|------------------------------|
+| memory_id   | INTEGER | Foreign key → Memory.id (~)  |
+| person_id   | INTEGER | Foreign key → Person.id (x)  |
+
+### 🧠 Memory
+| Column     | Type    | Notes                        |
+|------------|---------|------------------------------|
+| id         | INTEGER | Primary key (~)              |
+| title      | TEXT    |                              |
+| content    | TEXT    |                              |
+| timestamp  | TEXT    | Logical time of the memory   |
+| created_at | TEXT    | Actual creation timestamp    |
+
+### 🔗 MemoryTag (Join Table)
+| Column      | Type    | Notes                      |
+|-------------|---------|----------------------------|
+| memory_id   | INTEGER | Foreign key → Memory.id (~)|
+| tag_id      | INTEGER | Foreign key → Tag.id (·)   |
+
+### 🏷️ Tag
+| Column      | Type    | Notes             |
+|-------------|---------|-------------------|
+| id          | INTEGER | Primary key (·)   |
+| name        | TEXT    |                   |
+| description | TEXT    |                   |
