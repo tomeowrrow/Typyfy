@@ -1,17 +1,5 @@
 
-Thank you for using:
- 
-                                                                      
-888888888888                                       ad88               
-     88                                           d8"                 
-     88                                           88                  
-     88  8b       d8  8b,dPPYba,   8b       d8  MM88MMM  8b       d8  
-     88  .8b     d8.  88P'    "8a  .8b     d8'    88     .8b     d8'  
-     88   .8b   d8'   88       d8   .8b   d8'     88      .8b   d8'   
-     88    .8b,d8'    88b,   ,a8"    .8b,d8'      88       .8b,d8'    
-     88      Y88'     88`YbbdP"'       Y88'       88         Y88'     
-             d8'      88               d8'                   d8'      
-            d8'       88              d8'                   d8'       
+Thank you for using TYPYFY !
             
 The SQLite-backed command-line interface that lets you write diary in terminal, as though you were testing code or smth.
 
